@@ -19,7 +19,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Entity
 @Table(name = "authorities", uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"username", "uoleid"})
+        @UniqueConstraint(columnNames = {"username", "roleid"})
 })
 //UniqueConstraint ràng buộc đảm bảo tính duy nhất không bị trùng lặp
 public class Authorities implements Serializable {
@@ -31,7 +31,7 @@ public class Authorities implements Serializable {
     @JoinColumn(name = "username")
     private Accounts account;
     @ManyToOne
-    @JoinColumn(name = "uoleid")
+    @JoinColumn(name = "roleid")
     private Roles role;
 
 

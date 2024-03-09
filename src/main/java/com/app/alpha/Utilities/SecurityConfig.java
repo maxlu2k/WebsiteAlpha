@@ -62,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable().cors().disable();
 
         //Phân quyền sử dụng - bắt buộc đăng nhập khi truy cập vào bất kỳ URL nào
-        http.authorizeRequests().antMatchers("/home/index").permitAll().anyRequest().authenticated();
+        http.authorizeRequests().antMatchers("/accounts/all").permitAll().anyRequest().authenticated();
 
         //Giao diện đăng nhập
         http.httpBasic();
