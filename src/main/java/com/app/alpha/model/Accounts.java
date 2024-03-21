@@ -1,10 +1,9 @@
-package com.app.alpha.Model;
+package com.app.alpha.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.criterion.Order;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

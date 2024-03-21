@@ -1,8 +1,8 @@
-package com.app.alpha.Service.Impl;
+package com.app.alpha.service.impl;
 
 
-import com.app.alpha.Model.Accounts;
-import com.app.alpha.Service.AccountService;
+import com.app.alpha.model.Accounts;
+import com.app.alpha.service.AccountService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -2,24 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Main</title>
+    <title>Title</title>
 </head>
 <body>
 <main>
+<!--    <h2 th:text="${message}"></h2>-->
     <h3 th:unless="${#request.remoteUser}">
         <i style="color: red">Chưa đăng nhập</i>
     </h3>
     <th:block th:if="${#request.remoteUser}">
         <h3 style="color: blue">Authentication infomation</h3>
-
+        <h2 th:text="ok"></h2>
         <ul>
-            <li>Username: <b>[[${#request.remoteUser}]]</b></li>
-            <li>IsAdmin? <b>[[${#request.#request.isUserInRole()}]]</b></li>
+            <li>Username: <b th:text="${#request.remoteUser}"></b></li>
+            <li>IsAdmin? <b th:text="${#request.isUserInRole('ROLE_ADMIN')} ? 'Yes' : 'No'"></b></li>
         </ul>
-<!--        lây thông tin người đăng nhập trong request.userPrincipal-->
+        <!--        lây thông tin người đăng nhập trong request.userPrincipal-->
         <ul th:object="${#request.userPrincipal}">
-            <li>Username: <b>[[*{name}]]</b></li>
-            <li>Roles: <b>[[*{authorities}]]</b></li>
+            <li>Username: <b th:text="*{name}"></b></li>
+            <li>Roles: <b th:text="*{authorities}"></b></li>
         </ul>
     </th:block>
 </main>

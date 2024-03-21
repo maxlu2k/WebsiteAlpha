@@ -1,6 +1,6 @@
-package com.app.alpha.Service;
+package com.app.alpha.service;
 
-import com.app.alpha.Model.Accounts;
+import com.app.alpha.model.Accounts;
 
 import java.util.List;
 

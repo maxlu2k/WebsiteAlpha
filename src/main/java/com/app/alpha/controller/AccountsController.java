@@ -1,9 +1,8 @@
-package com.app.alpha.Controller;
+package com.app.alpha.controller;
 
-import com.app.alpha.Repository.AccountsRepository;
-import com.app.alpha.Utilities.SecurityConfig;
+import com.app.alpha.repository.AccountsRepository;
+import com.app.alpha.config.SecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
